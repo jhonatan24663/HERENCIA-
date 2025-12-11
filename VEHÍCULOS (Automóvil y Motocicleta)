@@ -1,0 +1,30 @@
+class Vehiculo:
+    def __init__(self, marca, modelo, año):
+        self.marca = marca
+        self.modelo = modelo
+        self.año = año
+    
+    def detalles(self):
+        print(f"{self.marca} {self.modelo} ({self.año})")
+
+class Automovil(Vehiculo):
+    def __init__(self, marca, modelo, año, km_litro):
+        super().__init__(marca, modelo, año)
+        self.km_litro = km_litro
+    
+    def eficiencia(self):
+        return self.km_litro
+    
+    def combustible_para_viaje(self, km):
+        return km / self.km_litro
+
+class Motocicleta(Vehiculo):
+    def __init__(self, marca, modelo, año, km_litro):
+        super().__init__(marca, modelo, año)
+        self.km_litro = km_litro
+    
+    def eficiencia(self):
+        return self.km_litro
+    
+    def combustible_para_viaje(self, km):
+        return km / self.km_litro
