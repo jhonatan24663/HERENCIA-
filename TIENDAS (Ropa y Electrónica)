@@ -1,0 +1,23 @@
+class Tienda:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.inventario = []
+    
+    def info(self):
+        print(f"Tienda: {self.nombre}")
+
+class TiendaRopa(Tienda):
+    def agregar(self, prenda):
+        self.inventario.append(prenda)
+    
+    def eliminar(self, prenda):
+        if prenda in self.inventario:
+            self.inventario.remove(prenda)
+
+class TiendaElectronica(Tienda):
+    def agregar(self, producto):
+        self.inventario.append(producto)
+    
+    def eliminar(self, producto):
+        if producto in self.inventario:
+            self.inventario.remove(producto)
