@@ -1,0 +1,16 @@
+class Pago:
+    def __init__(self, monto, fecha):
+        self.monto = monto
+        self.fecha = fecha
+    
+    def detalles(self):
+        print(f"Monto: ${self.monto}")
+        print(f"Fecha: {self.fecha}")
+
+class PagoTarjeta(Pago):
+    def procesar(self):
+        print("Pago con tarjeta procesado.")
+
+class PagoPayPal(Pago):
+    def procesar(self):
+        print("Pago con PayPal procesado.")
