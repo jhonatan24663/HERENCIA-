@@ -1,0 +1,19 @@
+class Animal:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+    
+    def detalles(self):
+        print(f"Animal: {self.nombre}")
+        print(f"Edad: {self.edad} años")
+    
+    def sonido(self):
+        print("Este animal hace un sonido.")
+
+class Perro(Animal):
+    def sonido(self):
+        print("Guau guau")
+
+class Gato(Animal):
+    def sonido(self):
+        print("Miau")
