@@ -1,0 +1,22 @@
+class Producto:
+    def __init__(self, nombre, precio, vencimiento):
+        self.nombre = nombre
+        self.precio = precio
+        self.vencimiento = vencimiento
+    
+    def detalles(self):
+        print(f"Producto: {self.nombre}")
+        print(f"Precio: ${self.precio}")
+        print(f"Vence el: {self.vencimiento}")
+
+class ProductoAlimenticio(Producto):
+    def descuento(self, dias_restantes):
+        if dias_restantes <= 3:
+            return self.precio * 0.30
+        return 0
+
+class ProductoElectronico(Producto):
+    def descuento(self, garantia_meses):
+        if garantia_meses < 6:
+            return self.precio * 0.10
+        return 0
